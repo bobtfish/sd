@@ -54,7 +54,14 @@ If you're interested in building a replica type for your bug
 tracker, you should get in touch with SD's developers (see
 http://syncwith.us/contact).
 
-The RT server is specified as as rt:serveraddress|Queue|Query
+The RT server is specified as as rt:serveraddress|Queue|Query.
+  - serveraddress: the root of your rt install, ie http://rt.cpan.org
+  - Queue: the ticket queue that you would like to restrict to, 
+           use 'Generic' as a safe catch all.
+  - Query: any further filtering you would like, leave empty to pull all
+           matching tickets.
+
+Examples:
 
     ${cmd}clone --from "rt:http://rt3.fsck.com|rt3|Owner='jesse'"
       Create a local replica and pull data from a foreign replica.
