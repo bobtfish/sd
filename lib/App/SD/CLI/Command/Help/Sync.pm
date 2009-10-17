@@ -73,6 +73,8 @@ The RT server is specified as as rt:serveraddress|Queue|Query
     ${cmd}pull --from "rt:http://rt3.fsck.com|rt3|Owner='jesse'"
       Pull changes from a foreign replica to be merged into the
       local replica.
+      
+Hiveminder is specified as hm:http://hiveminder.com
 
     Cloning from Google Code
 

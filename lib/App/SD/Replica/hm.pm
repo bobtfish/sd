@@ -58,8 +58,8 @@ sub BUILD {
             site        => $self->remote_url,
             cookie_name => 'JIFTY_SID_HIVEMINDER',
 
-            email    => $username,
-            password => $password
+            email    => $self->foreign_username($username),
+            password => $password,
         )
     );
 }
