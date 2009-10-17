@@ -126,7 +126,7 @@ sub add_prop_change {
     my $old   = $args{'history_entry'}{'old_value'} ||'';
     my $new   = $args{'history_entry'}{'new_value'} ||'';
 
-    if ( $args{'previous_state'}->{$field} eq $new ) {
+    if ( defined $args{'previous_state'}->{$field} && $args{'previous_state'}->{$field} eq $new ) {
         $args{'previous_state'}->{$field} = $old;
     } else {
         $args{'previous_state'}->{$field} = $old;
