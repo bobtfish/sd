@@ -37,10 +37,10 @@ sub string_to_datetime {
         $dt->set_time_zone( 'GMT' );
         return $dt;
     }
- 
+
 	#Thu Jun 11 05:21:26 -0700 2009 - as github was broken on 2009-08-25
 	if ($date =~ /^(\w{3}) (\w{3}) (\d+) (\d\d):(\d\d):(\d\d) ([+-]?\d{4}) (\d{4})$/) {
-        my ( $wday, $mon, $day, $hour, $min, $sec, $tz, $year) = 
+        my ( $wday, $mon, $day, $hour, $min, $sec, $tz, $year) =
           ( $1, $2, $3, $4, $5, $6, $7, $8 );
         my $dt = DateTime->new(
             year      => $year,
@@ -65,7 +65,7 @@ sub string_to_datetime {
         my $dt = $parser->parse_datetime($date);
         if ($parser->success) {
             return $dt;
-        } 
+        }
     }
 
     return undef;
